@@ -16,7 +16,7 @@ export class TrackService {
   ) {
   }
 
-  async create(dto: CreateTrackDto): Promise<Track> {
+  async create(dto: CreateTrackDto, picture, audio): Promise<Track> {
     const track = await this.trackModel.create({ ...dto, listen: 0 });
     return track;
   };
